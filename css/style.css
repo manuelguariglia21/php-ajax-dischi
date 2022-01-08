@@ -6,6 +6,12 @@
   box-sizing: border-box;
 }
 
+#app{
+  height: 100vh;
+  overflow: auto;
+  background-color: #1e2d3b;
+}
+
 /**** HEADER ****/
 
 header{
@@ -24,4 +30,49 @@ header img{
 
 header select{
   height: 50px;
+}
+
+/**** MAIN ****/
+
+main{
+  width: 80%;
+  margin: 50px auto;
+  display: flex;
+  justify-content: start;
+  flex-wrap: wrap;
+  overflow: auto;
+}
+
+/*** CARD ***/
+
+.mg-card{
+  background-color: #2E3A46;
+  color: white;
+  min-height: 300px;
+  width: 180px;
+  margin:5px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.mg-card img{
+  width: 80%;
+  margin: 10px auto;
+}
+
+.mg-card p{
+  padding: 0;
+  margin: 0;
+}
+
+.mg-card .title{
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.mg-card .author, .year{
+  color: gray;
 }

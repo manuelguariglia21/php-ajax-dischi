@@ -1,3 +1,8 @@
+<?php
+
+  require_once __DIR__ . "/database.php";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +15,8 @@
 <body>
   <!-- General Container -->
   <div id="app">
+
+  <!-- HEADER -->
     <header>
       <img src="img/logo.png" alt="Spotify Web">
       <select v-model="textToSearch" @change="$emit('sendSearch',textToSearch)" class="form-select form-select-lg mb-3 w-25" aria-label=".form-select-lg example">
@@ -20,6 +27,34 @@
         <option value="jazz">Jazz</option>
       </select>
     </header>
+  <!-- /HEADER -->
+
+  <!-- MAIN -->
+    <main>
+      
+      
+        <?php
+        foreach($cds as $cd){
+          //echo $cd['title'];
+            echo '<div class="mg-card">';
+
+            echo '<img src=\''.$cd['poster'].'\'>';
+
+            echo '<p class="title text-center">';
+            echo $cd['title'];
+            echo '</p>';
+
+            echo '<p class="author text-center">';
+            echo $cd['author'];
+            echo '</p>';
+
+          echo '</div>';
+        }
+        ?>
+
+    </main>
+  <!-- /MAIN -->
+
   </div>
   <!-- /General Container -->
   
