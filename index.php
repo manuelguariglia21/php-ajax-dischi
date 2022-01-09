@@ -36,16 +36,20 @@
         <?php
         foreach($cds as $cd){
           //echo $cd['title'];
-            echo '<div class="mg-card">';
+          echo '<div class="mg-card">';
 
             echo '<img src=\''.$cd['poster'].'\'>';
 
-            echo '<p class="title text-center">';
+            echo '<p class="title">';
             echo $cd['title'];
             echo '</p>';
 
-            echo '<p class="author text-center">';
+            echo '<p class="author">';
             echo $cd['author'];
+            echo '</p>';
+
+            echo '<p class="year">';
+            echo $cd['year'];
             echo '</p>';
 
           echo '</div>';

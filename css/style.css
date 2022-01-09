@@ -63,8 +63,7 @@ main{
 }
 
 .mg-card p{
-  padding: 0;
-  margin: 0;
+  text-align: center;
 }
 
 .mg-card .title{
